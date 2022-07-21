@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<meta name="theme-color" content="#1CCC5B" />
+    <title>Messages TS</title>
+  </head>
+  <body>
+    <header class="header">
+			<div class="header__container">
+					<a href="index.html"><img src="/src/assets/logo.png" alt="Logo header" class="header__logo"></a>
+					<h1 id="error-title" class="header__title">App messages</h1>
+			</div>
+		</header>
+		<main>
+				<section class="section-messages">
+						<section class="new-messages">
+								<article class="new-messages__container">
+										<p class="new-messages__title">New message: </p>
+										<form id="new-message">
+												<textarea name="new-message" id="new-message-value" class="new-messages__textarea"
+														placeholder="Your message"></textarea>
+												<button class="new-messages__button">
+														ADD <i class="bi bi-check-circle-fill"></i>
+												</button>
+										</form>
+								</article>
+						</section>
+						<section class="my-messages">
+								<div id="container-messages" class="my-messages__container lock">
+										<p class="my-messages__title">My messages</p>
+								</div>
+						</section>
+				</section>
+		</main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

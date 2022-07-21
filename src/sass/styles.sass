@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css")
+
+$custom-black: #1B1B1B
+$borders: #686868
+$soft-gray: #4A4A4A
+$gray: #3B3B3B
+$dark-gray: #2B2B2B
+$soft-green: #75f0a0
+$green: #1CCC5B
+$dark-green: #117F38
+$soft-blue: #729cff
+$blue: #2D6BFF
+$dark-blue: #1F4AB2
+$soft-red: #ff6a6a
+$red: #e81111
+$dark-red: #AB0000
+$shadow: 0px 4px 8px rgba(33, 13, 5, 0.16)
+$strong-shadow: 0 9px 32px -1px rgba(0, 0, 0, 0.5)
+
+*
+	margin: 0
+	padding: 0
+	font-family: 'Montserrat', sans-serif
+	color: white
+	box-sizing: border-box
+
+::selection
+	color: white
+	background-color: $green
+
+html
+	font-size: 10px
+
+body
+	background-color: $custom-black
+
+main
+	text-align: center
+
+.header
+	text-align: center
+	&__container
+		margin: 0 auto
+		padding: 20px 0
+		inline-size: 635px
+		display: grid
+		grid-template-columns: 1fr 1fr
+		align-items: center
+	&__logo
+		padding-inline-end: 50px
+		inline-size: 250px
+	&__title
+		padding-inline-start: 50px
+		font-size: 3rem
+		color: $green
+		border-inline-start: 1px solid $borders
+		&.error
+			color: $red
+
+.section-messages
+	margin: 0 auto
+	display: grid
+	grid-template: auto / 1fr 1fr
+	gap: 0 6%
+	inline-size: 90%
+	max-inline-size: 1200px
+
+.new-messages
+	display: flex
+	justify-content: flex-end
+	overflow: hidden
+	&__container
+		margin-block-end: 50px
+		padding: 20px
+		inline-size: 80%
+		max-inline-size: 450px
+		block-size: 325px
+		text-align: start
+		border-radius: 5px
+		background-color: $gray
+		box-shadow: $strong-shadow
+	&__title
+		padding-block-end: 10px
+		font-size: 1.6rem
+		font-weight: 600
+	&__textarea
+		padding: 5px
+		inline-size: 100%
+		block-size: 200px
+		font-size: 1.5rem
+		border: 1px solid $dark-gray
+		border-radius: 5px
+		background-color: $dark-gray
+		resize: none
+		outline: none
+		transition: all 0.3s ease
+		&:hover
+			border-color: $borders
+		&:focus
+			border-color: $green
+	&__button
+		margin-block-start: 15px
+		padding: 10px
+		inline-size: 100%
+		font-weight: bold
+		border: 1px solid $soft-green
+		border-radius: 5px
+		background-color: $green
+		transition: all 0.3s ease
+		cursor: pointer
+		&:hover
+			border-color: $green
+			background-color: $dark-green
+		&:active
+			border-color: $dark-green
+
+
+.my-messages
+	display: flex
+	justify-content: flex-start
+	overflow: hidden
+	&__container
+		@extend .new-messages__container
+		block-size: auto
+		&.lock
+			max-block-size: 60px
+	&__title
+		font-size: 1.6rem
+		font-weight: 600
+		text-align: center
+		transition: all 0.3s ease
+
+.card-message
+	display: flex
+	justify-content: space-between
+	margin: 10px 0
+	padding: 10px
+	font-size: 1.5rem
+	border-radius: 5px
+	background-color: $dark-gray
+	transition: all 0.3s ease
+	&:hover
+		box-shadow: $shadow
+	&__icon
+		color: $soft-red
+		cursor: pointer
+		transition: all 0.3s ease
+		&:hover
+			color: $red
+		&:active
+			color: $dark-red
+
+@media (max-width: 750px)
+  .header__container
+      display: block;
+      inline-size: 100%;
+
+  .header__logo,.header__title
+      padding: 0
+      border: none
+
+  .header__title
+      margin-block-start: 20px
+
+  .section-messages
+      display: block
+
+  .new-messages,.my-messages
+      justify-content: center
+
+  .new-messages__container,.my-messages__container
+      margin-block-end: 20px
+
