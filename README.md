@@ -1,3 +1,3 @@
 # App messages with local storage and TypeScript
 
-Github page✨ https://camilog909.github.io/messages-ls-ts/
+Github page✨ https://messageslsts-camilog909.netlify.app/
